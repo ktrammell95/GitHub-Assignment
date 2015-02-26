@@ -11,6 +11,7 @@ body .container .header {
   width: 100%;
   height: 50px;
   margin: auto;
+  margin-bottom: 10px;
   background-color: #f5f5f5;
   border-bottom: 1px #e5e5e5;
   display: inline-block;
@@ -50,7 +51,7 @@ body .container .header .links .help {
   font-weight: bold;
 }
 body .container .header .account {
-  float: left;
+  float: right;
   width: 30%;
 }
 body .container .header .account .links {
@@ -63,23 +64,17 @@ body .container .header .account .octicon-plus,
 body .container .header .account .octicon-inbox,
 body .container .header .account .octicon-gear,
 body .container .header .account .octicon-sign-out {
-  list-style: none;
   float: left;
   line-height: 50px;
-  border: 1px dashed;
-}
-body .container .header .account .avatar li,
-body .container .header .account .user-name li,
-body .container .header .account .octicon-plus li,
-body .container .header .account .octicon-inbox li,
-body .container .header .account .octicon-gear li,
-body .container .header .account .octicon-sign-out li {
-  display: inline;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 body .container .header .account .avatar img {
   width: 20px;
   height: 20px;
   border-radius: 5px;
+  margin-top: 14px;
+  margin-right: -15px;
 }
 body .container .main {
   height: 1000px;
@@ -128,6 +123,8 @@ body .container .main .sidebar .octicon-clock {
 }
 body .container .main .sidebar .stats {
   width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #cccccc;
 }
 body .container .main .sidebar .stats .followers,
 body .container .main .sidebar .stats .starred,
@@ -141,10 +138,83 @@ body .container .main .sidebar .stats .value {
   font-weight: bold;
   font-size: 24px;
   color: #4183C4;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+body .container .main .sidebar .stats .text {
+  margin-top: 8px;
+}
+body .container .main .sidebar .organizations {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 17px;
 }
 body .container .main .content {
-  width: calc(100% - 230px);
-  background-color: blue;
+  width: calc(100% - 250px);
   float: left;
+  margin-left: 20px;
+}
+body .container .main .content .content-header-upper {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #cccccc;
+}
+body .container .main .content .content-header-upper .contributions,
+body .container .main .content .content-header-upper .repositories,
+body .container .main .content .content-header-upper .public-activity {
+  float: left;
+  display: inline-block;
+  margin-right: 20px;
+}
+body .container .main .content .content-header-upper .edit {
+  border: 1px solid #cccccc;
+  float: right;
+  border-radius: 5px;
+  height: 25px;
+  line-height: 25px;
+}
+body .container .main .content .content-header-upper .edit .octicon-pencil {
+  margin-left: 5px;
+}
+body .container .main .content .content-header-upper .edit span {
+  margin-right: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+body .container .main .content .content-header-lower {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #cccccc;
+}
+body .container .main .content .content-header-lower .search-box {
+  width: 30%;
+  float: left;
+  height: 30px;
+}
+body .container .main .content .content-header-lower .search-box input {
+  color: #bcbcbc;
+}
+body .container .main .content .content-header-lower .content-links div {
+  float: left;
+  margin-right: 10px;
+}
+body .container .main .content .content-header-lower .new-btn {
+  padding-top: 8px;
+}
+body .container .main .content .content-header-lower .new-btn .octicon-repo {
+  border: 1px solid;
+  border-radius: 3px;
+  float: right;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: bolder;
+  color: white;
+  background-image: linear-gradient(#8add6d, #60b044);
+  background-repeat: repeat-x;
+  border-color: #5ca941;
 }

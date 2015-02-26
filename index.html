@@ -62,7 +62,7 @@
         <div class="stats">
           <div class="followers">
             <p class="value">1</p>
-            <pclass="text">Follower</p>
+            <p class="text">Follower</p>
           </div>
           <div class="starred">
             <p class="value">3</p>
@@ -97,27 +97,32 @@
               <span>Public activity</span>
             </div>
           </div>
-          <div class="octicon octicon-pencil">
+          <div class="edit">
+            <div class="octicon octicon-pencil">
             <span>Edit Profile</span>
+            </div>
           </div>
         </div> <!--content header-upper-->
 
         <div class="content-header-lower">
-          <div class="seacrh-box">
-            <div class="find"></div>
-            <div class="search-button"></div>
-          </div>
+          <form class="search-box" action="" method="">
+            <span></span>
+            <input type = "text" class="search-field" name="search" placeholder="Find a repository...">
+            <input type = "submit" class = "search-button" name="submit"value="Search">
+          </form>
           <div class="content-links">
-            <ul>
-              <li>All</li>
-              <li>Public</li>
-              <li>Private</li>
-              <li>Sources</li>
-              <li>Forks</li>
-              <li>Mirrors</li>
-            </ul>
+              <div>All</div>
+              <div>Public</div>
+              <div>Private</div>
+              <div>Sources</div>
+              <div>Forks</div>
+              <div>Mirrors</div>
           </div>
-          <div class="new-btn"></div>
+          <div class="new-btn">
+            <div class="octicon octicon-repo">
+              <span>New</span>
+            </div>
+          </div>
         </div><!--content-header-lower-->
 
         <div class="main-repos">
