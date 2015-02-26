@@ -218,3 +218,53 @@ body .container .main .content .content-header-lower .new-btn .octicon-repo {
   background-repeat: repeat-x;
   border-color: #5ca941;
 }
+body .container .main .content .main-repos {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  list-style: none;
+  border-bottom: 1px solid #eee;
+  height: 80px;
+}
+body .container .main .content .main-repos .repo-info {
+  float: left;
+  width: 70%;
+}
+body .container .main .content .main-repos .repo-title {
+  margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+body .container .main .content .main-repos .repo-desc {
+  max-width: 550px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #666;
+}
+body .container .main .content .main-repos .repo-update {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 13px;
+  color: #888;
+}
+body .container .main .content .main-repos .file-icons {
+  margin-top: 6px;
+  float: right;
+  font-size: 12px;
+  font-weight: bold;
+  color: #888;
+}
+body .container .main .content .main-repos .file-icons .file-type,
+body .container .main .content .main-repos .file-icons .octicon-star,
+body .container .main .content .main-repos .file-icons .octicon-git-branch {
+  float: left;
+  display: inline-block;
+  margin-top: 25px;
+  margin-right: 15px;
+  color: #cccccc;
+  line-height: 13px;
+  font-size: 13px;
+  font-weight: bold;
+}
