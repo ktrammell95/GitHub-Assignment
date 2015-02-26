@@ -16,27 +16,29 @@
   <div class="container">
     <div class="header">
 
-      <div class="octicon octicon-mark-github"></div>
-      <div class="search">Search</div>
+      <div class="mega-octicon octicon-mark-github"></div>
+      <div class="search">
+        <form class="search-form" action="" method="">
+          <span></span>
+          <input type = "text" class="search-field" name="search" placeholder="Search GitHub">
+          <!-- <input type = "submit" class = "search-button" name="submit"value="Search"> -->
+        </form>
+      </div>
 
       <div class="links">
-        <ul>
-          <li class="explore">Explore</li>
-          <li class="gist">Gist</li>
-          <li class="blog">Blog</li>
-          <li class="help">Help</li>
-        </ul>
+          <div class="explore">Explore</div>
+          <div class="gist">Gist</div>
+          <div class="blog">Blog</div>
+          <div class="help">Help</div>
       </div> <!--links-->
 
       <div class="account">
-        <ul>
-          <li class="avatar"></li>
-          <li class="user-name">ktrammell95</li>
-          <li class="octicon octicon-plus"></li>
-          <li class="octicon octicon-inbox"></li>
-          <li class="octicon octicon-gear"></li>
-          <li class="octicon octicon-sign-out"></li>
-        </ul>
+          <div class="avatar"><img src="images/headshot.jpg"></div>
+          <div class="user-name">ktrammell95</div>
+          <div class="octicon octicon-plus"></div>
+          <div class="octicon octicon-inbox"></div>
+          <div class="octicon octicon-gear"></div>
+          <div class="octicon octicon-sign-out"></div>
       </div> <!--account-->
 
     </div> <!--header-->
@@ -45,7 +47,7 @@
       
       <div class="sidebar">
         <div class="large-avatar">
-          <img>
+          <img src="images/headshot.jpg">
         </div>
         <div class="name">Katherine Trammell</div>
         <div class="user-name2">ktrammell95</div>
@@ -58,22 +60,27 @@
           <div class="date-joined">Joined on Jan 7, 2015</div>
         </div>
         <div class="stats">
-          <ul>
-            <li>1</li>
-            <li>Follower</li>
-            <li>3</li>
-            <li>Starred</li>
-            <li>0</li>
-            <li>Following</li>
-          </ul>
+          <div class="followers">
+            <p class="value">1</p>
+            <pclass="text">Follower</p>
+          </div>
+          <div class="starred">
+            <p class="value">3</p>
+            <p class="text">Starred</p>
+          </div>
+          <div class="following">
+            <p class="value">0</p>
+            <p class="text">Following</p>
+          </div>
         </div>
         <div class="organizations">
-          <div class="org-title"></div>
+          <div class="org-title">Organizations</div>
           <div class="org-icon"></div>
         </div>
       </div> <!--sidebar-->
       
       <div class="content">
+
         <div class="content-header-upper">
           <div class="contributions">
             <div class="octicon octicon-diff-added">
@@ -93,7 +100,8 @@
           <div class="octicon octicon-pencil">
             <span>Edit Profile</span>
           </div>
-        </div> <!--content header-->
+        </div> <!--content header-upper-->
+
         <div class="content-header-lower">
           <div class="seacrh-box">
             <div class="find"></div>
@@ -110,7 +118,8 @@
             </ul>
           </div>
           <div class="new-btn"></div>
-        </div><!--content-header-upper-->
+        </div><!--content-header-lower-->
+
         <div class="main-repos">
           <div class="repo-title">intro-to-bdd</div>
           <div class="repo-desc">Using Mocha and Chai</div>
@@ -125,6 +134,7 @@
             <span class="fork-num">0</span>
           </div>
         </div><!--main-repos-->
+
       </div> <!--content-->
     </div><!--main-->
     <div class="footer">
@@ -137,6 +147,7 @@
           <li>Contact</li>
         </ul>
       </div><!--footer-links-left-->
+
       <div class="octicon octicon-mark-github"></div>
       <div class="footer-links-right">
         <ul>

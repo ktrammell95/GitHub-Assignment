@@ -1,54 +1,150 @@
-.popular-repos {
-  border: 1px solid #bbb;
-  font-family: Helvetica, Arial, sans-serif;
-  border-radius: 4px;
-  width: 400px;
-  overflow: hidden;
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 13px;
 }
-.popular-repos .popular-repos-heading {
-  padding: 8px;
+body .container {
+  width: 100%;
+  width: 960px;
+  margin: 0;
+}
+body .container .header {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  background-color: #f5f5f5;
+  border-bottom: 1px #e5e5e5;
+  display: inline-block;
+}
+body .container .header .octicon-mark-github {
+  width: 10px;
+  height: auto;
+  margin: 5px;
+  float: left;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+body .container .header .search {
+  float: left;
+  width: 30%;
+  height: 30px;
+  margin-top: 4px;
+  padding-right: 15px;
+}
+body .container .header .search .search-field {
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+  width: 100%;
+  float: left;
+  height: 30px;
+}
+body .container .header .search .search-field input {
+  color: #bcbcbc;
+}
+body .container .header .links .explore,
+body .container .header .links .gist,
+body .container .header .links .blog,
+body .container .header .links .help {
+  float: left;
+  padding-right: 10px;
+  line-height: 50px;
   font-weight: bold;
-  background-color: #eee;
-  border-radius: 4px 4px 0 0;
-  border-bottom: 1px solid #bbb;
 }
-.popular-repos .repo {
-  clear: left;
-  padding: 8px 0;
-  border-bottom: 1px solid #bbb;
-  overflow: hidden;
+body .container .header .account {
+  float: left;
+  width: 30%;
 }
-.popular-repos .repo:last-child {
-  border-bottom: none;
-}
-.popular-repos .repo .icon,
-.popular-repos .repo .details,
-.popular-repos .repo .stars {
+body .container .header .account .links {
+  width: 100px;
   float: left;
 }
-.popular-repos .repo .icon {
-  width: 40px;
-  text-align: center;
-  color: #999;
+body .container .header .account .avatar,
+body .container .header .account .user-name,
+body .container .header .account .octicon-plus,
+body .container .header .account .octicon-inbox,
+body .container .header .account .octicon-gear,
+body .container .header .account .octicon-sign-out {
+  list-style: none;
+  float: left;
+  line-height: 50px;
+  border: 1px dashed;
 }
-.popular-repos .repo .details {
-  width: 250px;
+body .container .header .account .avatar li,
+body .container .header .account .user-name li,
+body .container .header .account .octicon-plus li,
+body .container .header .account .octicon-inbox li,
+body .container .header .account .octicon-gear li,
+body .container .header .account .octicon-sign-out li {
+  display: inline;
 }
-.popular-repos .repo .details .name {
+body .container .header .account .avatar img {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+body .container .main {
+  height: 1000px;
+  width: 100%;
+  margin-right: 5px;
+}
+body .container .main .sidebar {
+  width: 230px;
+  float: left;
+}
+body .container .main .sidebar .large-avatar img {
+  width: 230px;
+  height: 230px;
+  border-radius: 5px;
+}
+body .container .main .sidebar .name {
+  font-size: 35px;
   font-weight: bold;
-  color: #4183c4;
+  margin: 5px;
+  color: #333333;
 }
-.popular-repos .repo .details .desc {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #999;
-  margin: 5px 0;
-  font-size: 14px;
+body .container .main .sidebar .user-name2 {
+  font-size: 25px;
+  font-weight: 100;
+  color: #666666;
+  margin: 5px;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 15px;
 }
-.popular-repos .repo .stars {
-  width: 80px;
-  color: #999;
-  margin-right: 8px;
-  text-align: right;
+body .container .main .sidebar .city,
+body .container .main .sidebar .date {
+  height: 20px;
+  line-height: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+body .container .main .sidebar .date {
+  border-bottom: 1px solid #cccccc;
+}
+body .container .main .sidebar .octicon-location,
+body .container .main .sidebar .octicon-clock {
+  color: #cccccc;
+  float: left;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+body .container .main .sidebar .stats {
+  width: 100%;
+}
+body .container .main .sidebar .stats .followers,
+body .container .main .sidebar .stats .starred,
+body .container .main .sidebar .stats .following {
+  float: left;
+  display: inline-block;
+  padding-right: 10px;
+  text-align: center;
+}
+body .container .main .sidebar .stats .value {
+  font-weight: bold;
+  font-size: 24px;
+  color: #4183C4;
+  margin-bottom: 8px;
+}
+body .container .main .content {
+  width: calc(100% - 230px);
+  background-color: blue;
+  float: left;
 }
