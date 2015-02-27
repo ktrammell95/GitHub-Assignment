@@ -10,8 +10,17 @@ var renderAll = function(data) {
   var renderUser = function() {
     var userTemplate = JST["profile"];
     // console.log(userData);
-      $(".sidebar").html(userTemplate(userData));   
+
+    var createdAt = new Date(userData.created_at);
+    var m = moment(createdAt);
+    var formattedDate = m.format("MMM D, YYYY");
+    userData.formattedDate = formattedDate;
+
+    userData.myStars = starredData.length;
+
+    $(".sidebar").html(userTemplate(userData));   
    };
+
 
   var renderOrg = function() {
     var userTemplate = JST["orgs"];
@@ -21,18 +30,24 @@ var renderAll = function(data) {
 
   var renderRepo = function(repo) {
     var repoTemplate = JST["repotab"];
-    // console.log(reposData);
-    // $(".main-repos").html(repoTemplate(reposData[0]));
 
-      var $el = $(".main-repos");
-        // _.each(data, function(name) {
+    var updatedAt = new Date(repo.updated_at);
+    var update = moment(updatedAt);
+    var updatedDate = update.fromNow();
+    repo.updatedDate = updatedDate;
+
+    var $el = $(".main-repos");
         $el.append(repoTemplate(repo));
-    // })
   };
 
   var renderRepos = function() {
     _.each(reposData, function(repo){
       renderRepo(repo)
+
+  
+
+    
+
     });
   };
 
@@ -40,10 +55,6 @@ var renderAll = function(data) {
   renderOrg();
   renderRepos();
    
-    
-}
+ 
 
-    // var $el = $(".container");
-    //   _.each(data, function(title) {
-    //     var preview = new Section(title);
-    //     $el.append( preview.render() );
+}

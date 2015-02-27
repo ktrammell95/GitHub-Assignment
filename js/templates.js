@@ -24,10 +24,12 @@ this["JST"]["profile"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + "</div>\n<div class=\"city\">\n  <div class=\"octicon octicon-location\"></div>\n  <div class=\"city-name\">"
     + escapeExpression(((helper = (helper = helpers.location || (depth0 != null ? depth0.location : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"location","hash":{},"data":data}) : helper)))
     + "</div>\n</div>\n<div class=\"date\">\n  <div class=\"octicon octicon-clock\"></div>\n  <div class=\"date-joined\">Joined on "
-    + escapeExpression(((helper = (helper = helpers.created_at || (depth0 != null ? depth0.created_at : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"created_at","hash":{},"data":data}) : helper)))
+    + escapeExpression(((helper = (helper = helpers.formattedDate || (depth0 != null ? depth0.formattedDate : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"formattedDate","hash":{},"data":data}) : helper)))
     + "</div>\n</div>\n\n<div class=\"stats\">\n  <div class=\"followers\">\n    <p class=\"value\">"
     + escapeExpression(((helper = (helper = helpers.followers || (depth0 != null ? depth0.followers : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"followers","hash":{},"data":data}) : helper)))
-    + "</p>\n    <p class=\"text\">Follower</p>\n  </div>\n  <div class=\"starred\">\n    <p class=\"value\">3</p>\n    <p class=\"text\">Starred</p>\n  </div>\n  <div class=\"following\">\n    <p class=\"value\">"
+    + "</p>\n    <p class=\"text\">Follower</p>\n  </div>\n  <div class=\"starred\">\n    <p class=\"value\">"
+    + escapeExpression(((helper = (helper = helpers.myStars || (depth0 != null ? depth0.myStars : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"myStars","hash":{},"data":data}) : helper)))
+    + "</p>\n    <p class=\"text\">Starred</p>\n  </div>\n  <div class=\"following\">\n    <p class=\"value\">"
     + escapeExpression(((helper = (helper = helpers.following || (depth0 != null ? depth0.following : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"following","hash":{},"data":data}) : helper)))
     + "</p>\n    <p class=\"text\">Following</p>\n  </div>\n</div>\n\n";
 },"useData":true});
@@ -51,5 +53,14 @@ this["JST"]["repotab"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"name","hash":{},"data":data}) : helper)))
     + "</h2>\n  <h3 class=\"repo-desc\">"
     + escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"description","hash":{},"data":data}) : helper)))
-    + "</h3>\n  <h4 class=\"repo-update\">Updated 2 days ago</h4>\n</div>";
+    + "</h3>\n  <h4 class=\"repo-update\">Updated "
+    + escapeExpression(((helper = (helper = helpers.updatedDate || (depth0 != null ? depth0.updatedDate : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"updatedDate","hash":{},"data":data}) : helper)))
+    + "</h4>\n</div>";
+},"useData":true});
+this["JST"] = this["JST"] || {};
+this["JST"]["starred"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  return "  <div class=\"starred\">\n    <p class=\"value\">"
+    + escapeExpression(((helper = (helper = helpers.stars || (depth0 != null ? depth0.stars : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"stars","hash":{},"data":data}) : helper)))
+    + "</p>\n    <p class=\"text\">Starred</p>\n  </div>";
 },"useData":true});
