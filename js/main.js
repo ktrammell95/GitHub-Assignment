@@ -2,12 +2,12 @@ $(function() {
 
   var api = new Github("ktrammell95");
 
-  var renderAll = (function(data) {
+  // var renderAll = (function(data) {
 
-    console.log(data)
-    // var render = new renderAll(data);
+  //   // console.log(data)
+  //   // var render = new renderAll(data);
 
-  })
+  // })
     api.loadAll(renderAll);
 });
 

@@ -1,26 +1,33 @@
-var renderAll = (function(data) {
+var renderAll = function(data) {
 
-  var repos = data.repos;
-  var orgs = data.orgs;
-  var starred = data.starred;
-  var user = data.user;
+  var reposData   = data.repos;
+  var userData    = data.user;
+  var orgsData    = data.orgs;
+  var starredData = data.starred;
 
- var renderUser() {
-    var template = JST["profile"];
+console.log(userData);
 
-    
- }
+  var renderUser = function() {
+    var userTemplate = JST["profile"];
+    // console.log(userData);
+      $(".sidebar").html(userTemplate(userData));   
+   };
 
- // var renderRepos () {
+  var renderOrg = function() {
+    var userTemplate = JST["orgs"];
+    console.log(orgsData);
+      $(".sidebar").append(userTemplate(orgsData[0]));
+   };
 
- // }
+  // var renderRepos = function() {
+  //   var reposTemplate = JST["repos"];
+  //   console.log(reposData);
+  //     $(".repos")_.each.append(reposTemplate(reposData))
+  // };  
 
- // renderUser();
+  renderUser();
+  renderOrg();
  // renderRepos();
-
-    return renderAll;
-});
-
-
-
-// var sorted = _.sortBy(data, "stargazers_count")
+    
+    
+}

@@ -6,6 +6,13 @@ this["JST"]["icon"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"mai
     + "\"></span>";
 },"useData":true});
 this["JST"] = this["JST"] || {};
+this["JST"]["orgs"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  return "<div class=\"organizations\">\n  <div class=\"org-title\">Organizations</div>\n  <div class=\"org-icon\">\n    <img src=\""
+    + escapeExpression(((helper = (helper = helpers.avatar_url || (depth0 != null ? depth0.avatar_url : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"avatar_url","hash":{},"data":data}) : helper)))
+    + "\">\n  </div>\n</div>\n";
+},"useData":true});
+this["JST"] = this["JST"] || {};
 this["JST"]["profile"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
   var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
   return "<div class=\"large-avatar\">\n  <img src=\""
@@ -22,9 +29,7 @@ this["JST"]["profile"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + escapeExpression(((helper = (helper = helpers.followers || (depth0 != null ? depth0.followers : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"followers","hash":{},"data":data}) : helper)))
     + "</p>\n    <p class=\"text\">Follower</p>\n  </div>\n  <div class=\"starred\">\n    <p class=\"value\">3</p>\n    <p class=\"text\">Starred</p>\n  </div>\n  <div class=\"following\">\n    <p class=\"value\">"
     + escapeExpression(((helper = (helper = helpers.following || (depth0 != null ? depth0.following : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"following","hash":{},"data":data}) : helper)))
-    + "</p>\n    <p class=\"text\">Following</p>\n  </div>\n</div>\n\n<div class=\"organizations\">\n  <div class=\"org-title\">Organizations</div>\n  <div class=\"org-icon\">"
-    + escapeExpression(((helper = (helper = helpers.avatar_url || (depth0 != null ? depth0.avatar_url : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"avatar_url","hash":{},"data":data}) : helper)))
-    + "</div>\n</div>";
+    + "</p>\n    <p class=\"text\">Following</p>\n  </div>\n</div>\n\n";
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["repo"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

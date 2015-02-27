@@ -149,6 +149,10 @@ body .container .main .sidebar .organizations {
   font-weight: bold;
   margin-top: 17px;
 }
+body .container .main .sidebar .organizations .org-icon img {
+  width: auto;
+  height: 42px;
+}
 body .container .main .content {
   width: calc(100% - 250px);
   float: left;
