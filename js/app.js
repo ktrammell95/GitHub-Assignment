@@ -5,7 +5,7 @@ var renderAll = function(data) {
   var orgsData    = data.orgs;
   var starredData = data.starred;
 
-console.log(userData);
+// console.log(userData);
 
   var renderUser = function() {
     var userTemplate = JST["profile"];
@@ -15,19 +15,35 @@ console.log(userData);
 
   var renderOrg = function() {
     var userTemplate = JST["orgs"];
-    console.log(orgsData);
+    // console.log(orgsData);
       $(".sidebar").append(userTemplate(orgsData[0]));
    };
 
-  // var renderRepos = function() {
-  //   var reposTemplate = JST["repos"];
-  //   console.log(reposData);
-  //     $(".repos")_.each.append(reposTemplate(reposData))
-  // };  
+  var renderRepo = function(repo) {
+    var repoTemplate = JST["repotab"];
+    // console.log(reposData);
+    // $(".main-repos").html(repoTemplate(reposData[0]));
+
+      var $el = $(".main-repos");
+        // _.each(data, function(name) {
+        $el.append(repoTemplate(repo));
+    // })
+  };
+
+  var renderRepos = function() {
+    _.each(reposData, function(repo){
+      renderRepo(repo)
+    });
+  };
 
   renderUser();
   renderOrg();
- // renderRepos();
-    
+  renderRepos();
+   
     
 }
+
+    // var $el = $(".container");
+    //   _.each(data, function(title) {
+    //     var preview = new Section(title);
+    //     $el.append( preview.render() );

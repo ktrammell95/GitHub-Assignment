@@ -45,7 +45,9 @@ this["JST"]["repo"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"mai
 this["JST"] = this["JST"] || {};
 this["JST"]["repotab"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
   var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
-  return "<div class = \"file-icons\">\n  <ul>\n    <li class=\"file-type\">Javascript</li>\n    <li class=\"octicon-icon\"><span class=\"octicon octicon-star\">0</span></li>\n    <li class=\"octicon-icon\"><span class=\"octicon octicon-git-branch\">0</span></li>\n  </ul>\n</div>\n<div class=\"repo-info\">\n  <h2 class=\"repo-title\">"
+  return "<div class = \"file-icons\">\n  <ul>\n    <li class=\"file-type\">"
+    + escapeExpression(((helper = (helper = helpers.language || (depth0 != null ? depth0.language : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"language","hash":{},"data":data}) : helper)))
+    + "</li>\n    <li class=\"octicon-icon\"><span class=\"octicon octicon-star\">0</span></li>\n    <li class=\"octicon-icon\"><span class=\"octicon octicon-git-branch\">0</span></li>\n  </ul>\n</div>\n<div class=\"repo-info\">\n  <h2 class=\"repo-title\">"
     + escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"name","hash":{},"data":data}) : helper)))
     + "</h2>\n  <h3 class=\"repo-desc\">"
     + escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"description","hash":{},"data":data}) : helper)))
