@@ -1,30 +1,24 @@
-var App = (function(data) {
-  function App(data) {
-    this.data = data;
+var renderAll = (function(data) {
 
-    this.$mainRepos = $(".main-repos");
-    this.$sidebar = $(".sidebar");
+  var repos = data.repos;
+  var orgs = data.orgs;
+  var starred = data.starred;
+  var user = data.user;
 
-    this.$repos = $(".repos");
-    this.$orgs= $(".orgs");
-    this.$starred = $(".starred");
-    this.$user = $(".user");
+ var renderUser() {
+    var template = JST["profile"];
+
     
+ }
 
-    // this.showProfile();
-    // this.addListeners();
+ // var renderRepos () {
 
-    App.prototype = {
+ // }
 
-      showProfile: function() {
-        var data = this.$user();
-        var userInfo = new ProfileGroup(data);
-        this.$sidebar.html( userInfo.render() );
-      }
-    
-    };
-  };
-    return App;
+ // renderUser();
+ // renderRepos();
+
+    return renderAll;
 });
 
 

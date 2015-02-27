@@ -2,33 +2,15 @@ $(function() {
 
   var api = new Github("ktrammell95");
 
-  var app = (function(api) {
+  var renderAll = (function(data) {
 
-    console.log(api)
-    return api;
+    console.log(data)
+    // var render = new renderAll(data);
 
   })
-    api.loadAll(app);
+    api.loadAll(renderAll);
 });
 
-//app links to app.js where it is a function that contains
-//var orgs = data.orgs
-//var starred = data.starred.
-
-
-
-// App.js is where you will get your data to show (similar to photo album)
-// one section for showing left side of screen
-// one section for repo section
-
-// $(function(){
-//   $.ajax("images.json", {
-//     success: function(data) {
-//       // console.log(data)
-//       window.app = new App(data);
-//     },
-//     error: function() {
-//       console.log("failed to load images.json");
-//     }
-//   });
-// });
+//creating new copy of Github to pull in user data
+//creating a callback to run the api.loadAll
+//pass in the data from the callback into the new App

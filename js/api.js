@@ -1,7 +1,3 @@
-function icon(name) {
-  return JST.icon({icon: name});
-}
-
 //API pull in that JD created//
 
 var Github = (function() {

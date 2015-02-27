@@ -18,11 +18,11 @@ this["JST"]["profile"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + escapeExpression(((helper = (helper = helpers.location || (depth0 != null ? depth0.location : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"location","hash":{},"data":data}) : helper)))
     + "</div>\n</div>\n<div class=\"date\">\n  <div class=\"octicon octicon-clock\"></div>\n  <div class=\"date-joined\">Joined on "
     + escapeExpression(((helper = (helper = helpers.created_at || (depth0 != null ? depth0.created_at : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"created_at","hash":{},"data":data}) : helper)))
-    + "</div>\n</div>\n<div class=\"stats\">\n  <div class=\"followers\">\n    <p class=\"value\">"
+    + "</div>\n</div>\n\n<div class=\"stats\">\n  <div class=\"followers\">\n    <p class=\"value\">"
     + escapeExpression(((helper = (helper = helpers.followers || (depth0 != null ? depth0.followers : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"followers","hash":{},"data":data}) : helper)))
     + "</p>\n    <p class=\"text\">Follower</p>\n  </div>\n  <div class=\"starred\">\n    <p class=\"value\">3</p>\n    <p class=\"text\">Starred</p>\n  </div>\n  <div class=\"following\">\n    <p class=\"value\">"
     + escapeExpression(((helper = (helper = helpers.following || (depth0 != null ? depth0.following : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"following","hash":{},"data":data}) : helper)))
-    + "</p>\n    <p class=\"text\">Following</p>\n  </div>\n</div>\n<div class=\"organizations\">\n  <div class=\"org-title\">Organizations</div>\n  <div class=\"org-icon\">"
+    + "</p>\n    <p class=\"text\">Following</p>\n  </div>\n</div>\n\n<div class=\"organizations\">\n  <div class=\"org-title\">Organizations</div>\n  <div class=\"org-icon\">"
     + escapeExpression(((helper = (helper = helpers.avatar_url || (depth0 != null ? depth0.avatar_url : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"avatar_url","hash":{},"data":data}) : helper)))
     + "</div>\n</div>";
 },"useData":true});
