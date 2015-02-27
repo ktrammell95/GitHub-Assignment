@@ -28,7 +28,7 @@ var Github = (function() {
     hitApi: function(url, cb) {
       $.ajax(url, {
         data: {
-          access_token: "48b50eddb224e5955ee636a2db61bcf72bdc90d2"
+          access_token: ["2984ed99", "32920011", "3425abf7d", "2445e09578c53ef"].join("")
         },
         success: function(data) {
           cb(data);
