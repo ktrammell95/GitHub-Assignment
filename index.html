@@ -38,7 +38,8 @@
       <div class="account">
           <div class="avatar"><img src="images/headshot.jpg"></div>
           <div class="user-name">ktrammell95</div>
-          <div class="octicon octicon-plus"></div>
+          <div class="octicon octicon-plus"> </div>
+          <div class="octicon octicon-triangle-down"></div>
           <div class="octicon octicon-inbox"></div>
           <div class="octicon octicon-gear"></div>
           <div class="octicon octicon-sign-out"></div>
@@ -46,11 +47,10 @@
     </div>  
   </div> <!--header-->
 
-  
+
   <div class="container">
     
     <div class="main">
-      
       <div class="sidebar">
        <!--  <div class="large-avatar">
           <img src="images/headshot.jpg">
@@ -107,19 +107,24 @@
         </div> <!--content header-upper-->
 
         <div class="content-header-lower">
-          <form class="search-box" action="" method="">
+          <div class="search-box" action="" method="">
             <span></span>
             <input type = "text" class="search-field" name="search" placeholder="Find a repository...">
-            <input type = "submit" class = "search-button" name="submit"value="Search">
-          </form>
-          <ul class="repo-filters">
-              <li><a href="#">All</a></li>
-              <li><a href="#">Public</a></li>
-              <li><a href="#">Private</a></li>
-              <li><a href="#">Sources</a></li>
-              <li><a href="#">Forks</a></li>
-              <li><a href="#">Mirrors</a></li>
-          </ul>
+            <div class="search-button">
+              <span>Search</span>
+            </div>
+            <!-- <input type = "submit" class = "search-button" name="submit"value="Search"> -->
+          </div>
+          <div class="repo-filters-container">
+            <ul class="repo-filters">
+                <li><a href="#">All</a></li>
+                <li><a href="#">Public</a></li>
+                <li><a href="#">Private</a></li>
+                <li><a href="#">Sources</a></li>
+                <li><a href="#">Forks</a></li>
+                <li><a href="#">Mirrors</a></li>
+            </ul>
+          </div>
           <div class="new-btn">
             <div class="octicon octicon-repo">
               <span>New</span>

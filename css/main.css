@@ -6,22 +6,21 @@ body {
 }
 body .header {
   width: 100%;
-  height: 100px;
+  height: 50px;
   background-color: #f5f5f5;
-  border-bottom: 1px #e5e5e5;
+  border-bottom: 1px solid #d0d0d0;
 }
 body .header .header-inside {
   width: 960px;
   height: 100%;
   margin: auto;
   margin-bottom: 10px;
-  background-color: #f5f5f5;
-  border-bottom: 1px #e5e5e5;
 }
 body .header .header-inside .octicon-mark-github {
-  font-size: 25px;
+  font-size: 28px;
   margin: 10px;
   float: left;
+  color: #333;
 }
 body .header .header-inside .search {
   float: left;
@@ -45,9 +44,10 @@ body .header .header-inside .links .gist,
 body .header .header-inside .links .blog,
 body .header .header-inside .links .help {
   float: left;
-  padding-right: 10px;
-  line-height: 50px;
+  padding-left: 15px;
+  line-height: 44px;
   font-weight: bold;
+  font-size: 15px;
 }
 body .header .header-inside .account {
   float: right;
@@ -57,9 +57,18 @@ body .header .header-inside .account .links {
   width: 100px;
   float: left;
 }
+body .header .header-inside .account .octicon-plus,
+body .header .header-inside .account .octicon-inbox {
+  font-size: 20px;
+}
+body .header .header-inside .account .octicon-gear,
+body .header .header-inside .account .octicon-sign-out {
+  font-size: 15px;
+}
 body .header .header-inside .account .avatar,
 body .header .header-inside .account .user-name,
 body .header .header-inside .account .octicon-plus,
+body .header .header-inside .account .octicon-triangle-down,
 body .header .header-inside .account .octicon-inbox,
 body .header .header-inside .account .octicon-gear,
 body .header .header-inside .account .octicon-sign-out {
@@ -68,17 +77,28 @@ body .header .header-inside .account .octicon-sign-out {
   padding-right: 10px;
   padding-left: 10px;
 }
+body .header .header-inside .account .octicon-triangle-down {
+  font-size: 10px;
+  padding-left: 0;
+}
+body .header .header-inside .account .octicon-plus {
+  padding-right: 2px;
+}
 body .header .header-inside .account .avatar img {
   width: 20px;
   height: 20px;
-  border-radius: 5px;
+  border-radius: 3px;
   margin-top: 14px;
   margin-right: -15px;
+}
+body .header .header-inside .account .user-name {
+  font-weight: bold;
 }
 body .container {
   width: 100%;
   margin: auto;
-  margin-top: -50px;
+  padding-top: 15px;
+  clear: both;
 }
 body .container .main {
   width: 960px;
@@ -95,13 +115,13 @@ body .container .main .sidebar .large-avatar img {
   border-radius: 5px;
 }
 body .container .main .sidebar .name {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
   margin: 5px;
   color: #333333;
 }
 body .container .main .sidebar .user-name2 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 100;
   color: #666666;
   margin: 5px;
@@ -184,30 +204,47 @@ body .container .main .content .content-header-upper {
   height: 35px;
   line-height: 35px;
   border-bottom: 1px solid #cccccc;
+  margin-top: 15px;
 }
 body .container .main .content .content-header-upper .nav-tabs {
   margin: 0 0 15px;
+  float: left;
+  padding: 0;
+  background-color: white;
+}
+body .container .main .content .content-header-upper .nav-tabs .contributions,
+body .container .main .content .content-header-upper .nav-tabs .public-activity {
+  border-bottom: 1px solid #cccccc;
 }
 body .container .main .content .content-header-upper .nav-tabs .contributions,
 body .container .main .content .content-header-upper .nav-tabs .repositories,
 body .container .main .content .content-header-upper .nav-tabs .public-activity {
   float: left;
-  display: inline-block;
+  display: inline;
+  padding-left: 10px;
+  color: #666;
 }
 body .container .main .content .content-header-upper .nav-tabs .contributions span,
 body .container .main .content .content-header-upper .nav-tabs .repositories span,
 body .container .main .content .content-header-upper .nav-tabs .public-activity span {
-  display: inline-block;
+  display: inline;
   padding: 8px 12px 7px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 35px;
   color: #666;
   text-decoration: none;
-  border: 1px solid transparent;
+  padding-left: 0;
   border-bottom: 0;
+}
+body .container .main .content .content-header-upper .nav-tabs .repositories {
+  border: 1px solid #cccccc;
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0 ;
 }
 body .container .main .content .content-header-upper .edit {
   border: 1px solid #cccccc;
+  background-image: linear-gradient(#fcfcfc, #eeeeee);
+  background-repeat: repeat-x;
   float: right;
   border-radius: 5px;
   height: 25px;
@@ -222,40 +259,61 @@ body .container .main .content .content-header-upper .edit span {
   font-weight: bold;
 }
 body .container .main .content .content-header-lower {
+  clear: both;
   width: 100%;
   height: 50px;
   line-height: 50px;
   border-bottom: 1px solid #cccccc;
 }
 body .container .main .content .content-header-lower .search-box {
-  width: 30%;
   float: left;
-  height: 30px;
+  padding-top: 8px;
 }
 body .container .main .content .content-header-lower .search-box input {
   color: #bcbcbc;
 }
 body .container .main .content .content-header-lower .search-box .search-field {
-  height: 30px;
+  height: 25px;
+  width: 240px;
   border-radius: 3px;
+  float: left;
 }
-body .container .main .content .content-header-lower .repo-filters {
+body .container .main .content .content-header-lower .search-box .search-button {
+  float: left;
+  line-height: 30px;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eeeeee);
+  background-repeat: repeat-x;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  margin-left: 5px;
+  width: 70px;
+  text-align: center;
+  font-weight: bold;
+}
+body .container .main .content .content-header-lower .repo-filters-container {
+  float: left;
+  height: 100%;
+  margin-left: 10px;
+}
+body .container .main .content .content-header-lower .repo-filters-container .repo-filters {
   padding: 0;
-  marging-bottom: 0;
+  margin: 0;
 }
-body .container .main .content .content-header-lower .repo-filters li {
+body .container .main .content .content-header-lower .repo-filters-container .repo-filters li {
   position: relative;
   float: left;
   list-style: none;
   margin-left: 10px;
   font-size: 14px;
 }
-body .container .main .content .content-header-lower .repo-filters a {
+body .container .main .content .content-header-lower .repo-filters-container .repo-filters a {
   color: #4183c4;
   text-decoration: none;
 }
 body .container .main .content .content-header-lower .new-btn {
   padding-top: 8px;
+  float: right;
 }
 body .container .main .content .content-header-lower .new-btn .octicon-repo {
   border: 1px solid;
@@ -265,12 +323,15 @@ body .container .main .content .content-header-lower .new-btn .octicon-repo {
   height: 30px;
   text-align: center;
   line-height: 30px;
-  font-size: 12px;
-  font-weight: bolder;
   color: white;
   background-image: linear-gradient(#8add6d, #60b044);
   background-repeat: repeat-x;
   border-color: #5ca941;
+}
+body .container .main .content .content-header-lower .new-btn span {
+  font-weight: bold;
+  font-size: 12px;
+  text-shadow: 0px -1px #639e50;
 }
 body .container .main .content .main-repos {
   list-style: none;
@@ -309,9 +370,19 @@ body .container .main .content .main-repos .repo-contain .file-icons {
 body .container .main .content .main-repos .repo-contain .file-icons ul {
   list-style: none;
 }
+body .container .main .content .main-repos .repo-contain .file-icons ul .file-type,
+body .container .main .content .main-repos .repo-contain .file-icons ul .octicon-star,
+body .container .main .content .main-repos .repo-contain .file-icons ul .octicon-git-branch {
+  font-size: 13px;
+  color: #666;
+  font-weight: bold;
+}
 body .container .main .content .main-repos .repo-contain .file-icons ul li {
   display: inline;
   margin-right: 10px;
+}
+body .container .main .content .main-repos .repo-contain .file-icons ul li span {
+  font-size: 13px;
 }
 body .container .footer {
   clear: both;
