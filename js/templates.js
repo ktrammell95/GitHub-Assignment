@@ -36,26 +36,30 @@ this["JST"]["profile"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
 this["JST"] = this["JST"] || {};
 this["JST"]["repo"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
   var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
-  return "<div class=\"repo\">\n  <div class=\"icon\">\n    <span class=\"octicon octicon-repo\"></span>\n  </div>\n  <div class=\"details\">\n    <div class=\"name\">"
+  return "<div class=\"content\">\n  <div class=\"repo\">\n    <div class=\"icon\">\n      <span class=\"octicon octicon-repo\"></span>\n    </div>\n    <div class=\"details\">\n      <div class=\"name\">"
     + escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"name","hash":{},"data":data}) : helper)))
-    + "</div>\n    <div class=\"desc\">"
+    + "</div>\n      <div class=\"desc\">"
     + escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"description","hash":{},"data":data}) : helper)))
-    + "</div>\n  </div>\n  <div class=\"stars\">\n    <span class=\"stars-count\">"
+    + "</div>\n    </div>\n    <div class=\"stars\">\n      <span class=\"stars-count\">"
     + escapeExpression(((helper = (helper = helpers.stargazers_count || (depth0 != null ? depth0.stargazers_count : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"stargazers_count","hash":{},"data":data}) : helper)))
-    + "</span>\n    <span class=\"octicon octicon-star\"></span>\n  </div>\n</div>";
+    + "</span>\n      <span class=\"octicon octicon-star\"></span>\n    </div>\n  </div>\n</div>";
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["repotab"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
   var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
-  return "<div class = \"file-icons\">\n  <ul>\n    <li class=\"file-type\">"
-    + escapeExpression(((helper = (helper = helpers.language || (depth0 != null ? depth0.language : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"language","hash":{},"data":data}) : helper)))
-    + "</li>\n    <li class=\"octicon-icon\"><span class=\"octicon octicon-star\">0</span></li>\n    <li class=\"octicon-icon\"><span class=\"octicon octicon-git-branch\">0</span></li>\n  </ul>\n</div>\n<div class=\"repo-info\">\n  <h2 class=\"repo-title\">"
+  return "<div class=\"repo-contain\">\n  <div class= \"repo-info\">\n    <h2 class=\"repo-title\">"
     + escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"name","hash":{},"data":data}) : helper)))
-    + "</h2>\n  <h3 class=\"repo-desc\">"
+    + "</h2>\n    <h3 class=\"repo-desc\">"
     + escapeExpression(((helper = (helper = helpers.description || (depth0 != null ? depth0.description : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"description","hash":{},"data":data}) : helper)))
-    + "</h3>\n  <h4 class=\"repo-update\">Updated "
+    + "</h3>\n    <h4 class=\"repo-update\">Updated "
     + escapeExpression(((helper = (helper = helpers.updatedDate || (depth0 != null ? depth0.updatedDate : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"updatedDate","hash":{},"data":data}) : helper)))
-    + "</h4>\n</div>";
+    + "</h4>\n  </div>\n  <div class = \"file-icons\">\n    <ul> \n      <li class=\"file-type\">"
+    + escapeExpression(((helper = (helper = helpers.language || (depth0 != null ? depth0.language : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"language","hash":{},"data":data}) : helper)))
+    + "</li>\n      <li class=\"octicon-icon\"><span class=\"octicon octicon-star\">"
+    + escapeExpression(((helper = (helper = helpers.stargazers_count || (depth0 != null ? depth0.stargazers_count : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"stargazers_count","hash":{},"data":data}) : helper)))
+    + "</span></li>\n      <li class=\"octicon-icon\"><span class=\"octicon octicon-git-branch\">"
+    + escapeExpression(((helper = (helper = helpers.forks_count || (depth0 != null ? depth0.forks_count : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"forks_count","hash":{},"data":data}) : helper)))
+    + "</span></li>\n    </ul>\n  </div>\n</div>";
 },"useData":true});
 this["JST"] = this["JST"] || {};
 this["JST"]["starred"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

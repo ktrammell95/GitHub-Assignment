@@ -17,9 +17,8 @@
 
 
 <body>
-  <div class="container">
-    <div class="header">
-
+  <div class="header">
+    <div class="header-inside">
       <div class="mega-octicon octicon-mark-github"></div>
       <div class="search">
         <form class="search-form" action="" method="">
@@ -44,13 +43,16 @@
           <div class="octicon octicon-gear"></div>
           <div class="octicon octicon-sign-out"></div>
       </div> <!--account-->
+    </div>  
+  </div> <!--header-->
 
-    </div> <!--header-->
+  
+  <div class="container">
     
     <div class="main">
       
       <div class="sidebar">
-        <!-- <div class="large-avatar">
+       <!--  <div class="large-avatar">
           <img src="images/headshot.jpg">
         </div>
         <div class="name">Katherine Trammell</div>
@@ -67,40 +69,36 @@
           <div class="followers">
             <p class="value">1</p>
             <p class="text">Follower</p>
-          </div> -->
-          <!-- <div class="starred"> -->
-       <!--      <p class="value">3</p>
-            <p class="text">Starred</p> -->
-          <!-- </div> -->
-        <!--   <div class="following">
+          </div>
+          <div class="starred">
+            <p class="value">3</p>
+            <p class="text">Starred</p>
+          </div>
+          <div class="following">
             <p class="value">0</p>
             <p class="text">Following</p>
           </div>
-        </div> -->
-       <!--  <div class="organizations">
+        </div>
+        <div class="organizations">
           <div class="org-title">Organizations</div>
-          <div class="org-icon"></div>
-        </div> -->
+          <div class="org-icon"></div> -->
+        <!-- </div> -->
       </div> <!--sidebar-->
       
       <div class="content">
 
         <div class="content-header-upper">
-          <div class="contributions">
-            <div class="octicon octicon-diff-added">
+          <ul class="nav-tabs">
+            <li class="contributions octicon octicon-diff-added">
               <span>Contributions</span>
-            </div>
-          </div>
-          <div class="repositories">
-            <div class="octicon octicon-repo">
+            </li>
+            <li class="repositories octicon octicon-repo">
               <span>Repositories</span>
-            </div>
-          </div>
-          <div class="public-activity">
-            <div class="octicon octicon-rss">
+            </li>
+            <li class="public-activity octicon octicon-rss">
               <span>Public activity</span>
-            </div>
-          </div>
+            </li>
+          </ul>
           <div class="edit">
             <div class="octicon octicon-pencil">
             <span>Edit Profile</span>
@@ -114,14 +112,14 @@
             <input type = "text" class="search-field" name="search" placeholder="Find a repository...">
             <input type = "submit" class = "search-button" name="submit"value="Search">
           </form>
-          <div class="content-links">
-              <div>All</div>
-              <div>Public</div>
-              <div>Private</div>
-              <div>Sources</div>
-              <div>Forks</div>
-              <div>Mirrors</div>
-          </div>
+          <ul class="repo-filters">
+              <li><a href="#">All</a></li>
+              <li><a href="#">Public</a></li>
+              <li><a href="#">Private</a></li>
+              <li><a href="#">Sources</a></li>
+              <li><a href="#">Forks</a></li>
+              <li><a href="#">Mirrors</a></li>
+          </ul>
           <div class="new-btn">
             <div class="octicon octicon-repo">
               <span>New</span>
@@ -130,19 +128,18 @@
         </div><!--content-header-lower-->
 
         <div class="main-repos">
-        <!--   <div class = "file-icons">
-            <ul>
+          <!-- <div class = "file-icons">
+            <ul> 
               <li class="file-type">Javascript</li>
-              <li class="octicon octicon-star"><span>0</span></li>
-              <li class="octicon octicon-git-branch"><span>0</span></li>
+              <li class="octicon-icon"><span class="octicon octicon-star">0</span></li>
+              <li class="octicon-icon"><span class="octicon octicon-git-branch">0</span></li>
             </ul>
           </div>
-          <div class="repo-info">
+          <div class= "repo-info">
             <h2 class="repo-title">intro-to-bdd</h2>
             <h3 class="repo-desc">Using Mocha and Chai</h3>
-            <h4 class="repo-update">Updated 2 days ago</h4>
+            <h4 class="repo-update">Updated Updated 2 days ago</h4>
           </div> -->
-
         </div><!--main-repos-->
 
       </div> <!--content-->
@@ -151,24 +148,26 @@
       <div class="footer-links-left">
         <ul>
           <li class="copyright">&copy GitHub, Inc.</li>
-          <li>Terms</li>
-          <li>Privacy</li>
-          <li>Security</li>
-          <li>Contact</li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </div><!--footer-links-left-->
 
-      <div class="octicon octicon-mark-github"></div>
+      <div class="mega-octicon octicon-mark-github"></div>
+
       <div class="footer-links-right">
         <ul>
-          <li>Status</li>
-          <li>API</li>
-          <li>Training</li>
-          <li>Shop</li>
-          <li>Blog</li>
-          <li>About</li>
+          <li><a href="#">Status</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
         </ul>
       </div><!--footer-links-right-->
+      
     </div><!--footer-->
   </div><!--container-->
 

@@ -13,25 +13,26 @@
 body {
   font-family: Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 13px;
-  .container {
+  margin: 0;
+  padding: 0;
+  .header{
     width: 100%;
-    width: 960px;
-    margin: 0;
-    .header{
-      width: 100%;
-      height: 50px;
+    height: 100px;
+    background-color: #f5f5f5;
+    border-bottom: 1px #e5e5e5;
+    .header-inside{
+      width: 960px;
+      height: 100%;
       margin: auto;
       margin-bottom: 10px;
       background-color: #f5f5f5;
       border-bottom: 1px #e5e5e5;
-      display: inline-block;
         .octicon-mark-github {
-          width: 10px;
-          height: auto;
-          margin: 5px;
+          font-size: 25px;
+          margin: 10px;
           float: left;
-          padding-left: 25px;
-          padding-right: 25px;
+          // padding-left: 25px;
+          // padding-right: 25px;
         }
         .search {
           float: left;
@@ -80,12 +81,22 @@ body {
           margin-right: -15px;
         } 
       }
-      
-    }//header
+    }//header inside
+  }
+
+//container
+  .container {
+    width: 100%;
+    margin: auto;
+    margin-top: -50px;
+
+//contains sidebar and repo info
     .main {
-      height: 1000px;
-      width: 100%;
+      // height: 100%;
+      width: 960px;
       margin-right: 5px;
+      margin: auto;
+//sidebar
       .sidebar {
         width: 230px;
         float: left;
@@ -109,13 +120,20 @@ body {
           padding-bottom: 15px;
         }
         .city, .date {
-          height: 20px;
-          line-height: 20px;
-          margin-top: 8px;
-          margin-bottom: 8px;
+          width: 100%;
+          overflow-x: hidden;
+          white-space: nowrap;
+          font-size: 14px;
+          // border-top: 1px solid #eee;
+        }
+        .city {
+          padding-top: 15px;
+          margin-bottom: 8px; 
+
         }
         .date {
-          border-bottom: 1px solid #cccccc; 
+          border-bottom: 1px solid #eee;
+          padding-bottom: 15px; 
         }
         .octicon-location, .octicon-clock {
           color: #cccccc;
@@ -124,14 +142,19 @@ body {
           margin-right: 10px;
         }
         .stats {
-          width: 100%;
-          height: 90px;
-          border-bottom: 1px solid #cccccc;
+          margin-bottom: 10px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          text-align: center;
+          border-top: 1px solid #eee;
+          border-bottom: 1px solid #eee;
+          height: 70px;
           .followers, .starred, .following {
             float: left;
             display: inline-block;
-            padding-right: 10px;
             text-align: center;
+            width: 33%;
+            font-size: 11px;
           }
           .value {
             font-weight: bold;
@@ -151,11 +174,20 @@ body {
           .org-icon img {
             width: auto;
             height: 42px;
+            padding: 10px;
+            padding-left: 0px;
+            display: inline-block;
+            overflow: hidden;
+            line-height: 1;
+            vertical-align: middle;
+            border-radius: 3px;
           }
         }
       }//sidebar
+
+//content upper header
       .content {
-        width: calc(~"100% - 250px");
+        width: calc(~"100% - 270px");
         float: left;
         margin-left: 20px;
         .content-header-upper {
@@ -163,10 +195,22 @@ body {
           height: 35px;
           line-height: 35px;
           border-bottom: 1px solid #cccccc;
-          .contributions, .repositories, .public-activity {
+          .nav-tabs {
+            margin: 0 0 15px;
+            .contributions, .repositories, .public-activity {
             float: left;
             display: inline-block;
-            margin-right: 20px;
+              span {
+                display: inline-block;
+                padding: 8px 12px 7px;
+                font-size: 14px;
+                line-height: 20px;
+                color: #666;
+                text-decoration: none;
+                border: 1px solid transparent;
+                border-bottom: 0;
+              }
+            }
           }
           .edit {
             border: 1px solid #cccccc;
@@ -184,6 +228,8 @@ body {
             }
           }
         }//content-header-upper
+
+//content lower header
         .content-header-lower {
           width: 100%;
           height: 50px;
@@ -197,11 +243,33 @@ body {
               input {
                 color: #bcbcbc;
               }
+            .search-field {
+              height: 30px;
+              border-radius: 3px;
+            }
+            // .search-button {
+
+            // }
           }
-          .content-links div {
-            float:left;
-            margin-right: 10px;
-          }
+          .repo-filters {
+            padding: 0;
+            marging-bottom: 0;
+            li {
+              position: relative;
+              float: left;
+              list-style: none;
+              margin-left: 10px;
+              font-size: 14px;
+            }
+            a{
+              color: #4183c4;
+              text-decoration: none;
+            }
+          } 
+          // div {
+          //   float:left;
+          //   margin-right: 10px;
+          // }
           .new-btn {
             padding-top: 8px;
             .octicon-repo {
@@ -221,56 +289,104 @@ body {
             }
           }
         }//content-header-lower
+
+//main repo area
         .main-repos {
-          position: relative;
-          padding-top: 30px;
-          padding-bottom: 30px;
           list-style: none;
-          // border-bottom: 1px solid #eee;
-          height: 80px;
-          .file-icons {
-            margin-top: 6px;
-            float: right;
-            font-size: 12px;
-            font-weight: bold;
-            color: #888;
-            .file-type, .octicon-icon, .octicon-star, .octicon-git-branch {
-              float: left;
-              display: inline-block;
-              margin-top: 25px;
-              margin-right: 15px;
-              color: #cccccc;
-              line-height: 13px;
-              font-size: 13px;
-              font-weight: bold;
-            }
-          }
-          .repo-info {
-            float: left;
-            width: 70%;
-          }
-          .repo-title {
-            margin: 0 0 8px;
-            font-size: 20px;
-            line-height: 1.2;
-          }
-          .repo-desc {
-            max-width: 550px;
-            margin-top: 8px;
-            margin-bottom: 0;
-            font-size: 14px;
-            color: #666;
-          }
-          .repo-update {
+          .repo-contain {
             display: block;
-            margin-top: 8px;
-            margin-bottom: 0;
-            font-size: 13px;
-            color: #888;
+            height: 100px;
+             border-bottom: 1px solid #eee;
+             padding-top: 30px;
+            .repo-info {
+              float: left;
+              .repo-title {
+                margin: 0 0 8px;
+                font-size: 20px;
+                color: #4183c4;
+                line-height: 1.2;
+              }
+              .repo-desc {
+                margin-top: 8px;
+                margin-bottom: 0;
+                font-size: 14px;
+                color: #666;
+              }
+              .repo-update {
+                margin-top: 8px;
+                margin-bottom: 0;
+                font-size: 13px;
+                color: #888;
+              }
+            }
+            .file-icons{ 
+              float: right;
+              color: #cccccc;
+              ul {
+                list-style: none;
+                li {
+                display: inline;
+                margin-right: 10px;
+                }
+              }
+            }
           }
         }//main-repos
       }//content
     }//main
 
+//footer
+      .footer {
+        clear: both;
+        margin-top: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #777;
+        border-top: 1px solid #eee;
+        margin: auto;
+        width: 960px;
+//footer links left
+      .footer-links-left {
+        float: left;
+        // margin: auto;
+        margin-left: -40px;
+        li {
+        list-style: none;
+        display: inline;
+        float: left;
+        line-height: 16px;
+        padding-right: 15px; 
+          a{
+            text-decoration: none;
+            color: #4183c4;
+          }
+        }
+      }
+      .octicon-mark-github {
+        color: #ccc;
+        float: left;
+        margin-left: 165px;
+        font-size: 25px;
+      } 
+
+//footer links right
+      .footer-links-right {
+        float: right;
+        // margin: 5px;
+        li {
+        list-style: none;
+        display: inline;
+        float: left;
+        line-height: 16px;
+        padding-left: 15px;
+          a{
+            text-decoration: none;
+            color: #4183c4;
+          }
+        }
+      }
+    }
   }//container
 }//body
